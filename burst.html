@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>A2eatZ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src="//d3js.org/d3.v3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <a href="mapbox_initial.html">PREVIOUS</a>
+      <div>
+        <h1>A2eatZ</h1>
+        <p>By: Nathan Magyar, Jatin Gupta, Ru Jia, and Sanmeet Jasuja</p>
+      </div>
+      <a href="bar2.html">NEXT</a>
+    </header>
+    <div class="container">
+      <div>
+        <h1>Slice of the Pie</h1>
+        <p>The chart below represents all of the restaurants in Ann Arbor, broken
+          up in various ways from the center moving outwards. The center circle
+          represents the total number of restaurants for Ann Arbor. The
+          ring closest to the center displays the types of cuisines, with longer rings
+          indicating a greater quantity of restaurants in that cuisine category. The rating
+          of that cuisine category, derived from an averaging the ratings of all restaurants
+          belonging it, can be found in the cuisine tag in the right upon hover.
+          At the next level out, each cuisine is broken up by price, from low ($)
+          to high ($$$$). The outermost ring is comprised of individual restaurants
+          within that cuisine and price range. The length (radius) of the restaurant segment
+          indicates the rating, with higher ratings corresponding to greater lengths. To assist
+          with visual comparison, "rating rings" have been provided (one for each number between
+          1 and 5). The opacity
+          of the restaurant segment reflects the number of reviews that have contributed
+          to that rating (fewer reviews is reflected by a more faded color).
+          Hover over, or click on, a section to see more detail and learn more about
+          it. To zoom out, click the center of the circle.
+        </p>
+        <div id="legend">
+          <div class="cuisineLegend priceThing">
+            <div class="colorSwatch" id="burstCuisine"></div>
+            <p>Cuisine Category</p>
+          </div>
+          <div class="priceLegend">
+            <div class="priceThing">
+              <div class="colorSwatch" id="burstd1"></div>
+              <p>$</p>
+            </div>
+            <div class="priceThing">
+              <div class="colorSwatch" id="burstd2"></div>
+              <p>$$</p>
+            </div>
+            <div class="priceThing">
+              <div class="colorSwatch" id="burstd3"></div>
+              <p>$$$</p>
+            </div>
+            <div class="priceThing">
+              <div class="colorSwatch" id="burstd4"></div>
+              <p>$$$$</p>
+            </div>
+          </div>
+          <div class="ratingLegend">
+            <div id="zeroStars" class="priceThing">
+              <div id="smallLength"></div>
+              <p>0 Stars</p>
+            </div>
+            <div id="fourStars" class="priceThing">
+              <div id="largeLength"></div>
+              <p>5 Stars</p>
+            </div>
+          </div>
+          <div class="reviewCountLegend">
+            <div id="reviewGradient" class="priceThing"></div>
+            <div class="priceThing reviewCountLegendText">
+              <p><25</p>
+              <p>>75 reviews</p>
+            </div>
+          </div>
+        </div>
+        <section class="viz">
+          <section id="sunburst">
+
+          </section>
+          <div id="tags">
+            <p id="cuisineTag"></p>
+            <p id="priceTag"></p>
+            <p id="restaurantTag"></p>
+            <p id="ratingTag"></p>
+          </div>
+          <!-- <section class="info">
+            <p class="burstTag" id="selectedCuisine">Cuisine: <em>Not selected</em></p>
+            <p class="burstTag" id="selectedPrice">Price Range: </em>Not selected</em></p>
+          </section> -->
+        </section>
+      </div>
+    </div>
+
+    <script src="js/data2.js"></script>
+  </body>
+</html>
